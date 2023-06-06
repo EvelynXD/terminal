@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Hack";
+  src: url(/fonts/Hack-Regular.ttf);
+  display: swap;
+}
+
+* {
+  font-family: "Hack", monospace;
+  font-size: 14px;
+}
+
+/* Responsive styles for screens smaller than or equal to 768px */
+@media (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+}
+
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: underline;
+}
