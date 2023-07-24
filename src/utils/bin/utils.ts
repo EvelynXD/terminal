@@ -31,7 +31,7 @@ export const date = async (args: string[]): Promise<string> => {
   return new Date().toString()
 }
 
-export const blog = async (args: string[]): Promise<string> => {
+export const blogspot = async (args: string[]): Promise<string> => {
   setTimeout(function () {
     window.open("https://www.kebelet-iphone.my.id/", "_blank")
   }, 1000)
@@ -39,7 +39,7 @@ export const blog = async (args: string[]): Promise<string> => {
   return "Opening blogger..."
 }
 
-export const portfolio1 = async (args: string[]): Promise<string> => {
+export const portfolio = async (args: string[]): Promise<string> => {
   setTimeout(function () {
     window.open("https://evelynxd.vercel.app/", "_blank")
   }, 1000)
@@ -55,7 +55,7 @@ export const email = async (args: string[]): Promise<string> => {
 
 export const sudo = async (args: string[]): Promise<string> => {
   setTimeout(function () {
-    window.open("https://youtu.be/Js_-gKm1RYI")
+    window.open("https://youtu.be/G6N943NlCbw")
   }, 1000)
 
   return `Permission denied: unable to run the command '${args[0]}' as root.`
@@ -63,7 +63,7 @@ export const sudo = async (args: string[]): Promise<string> => {
 
 export const yarn = async (args: string[]): Promise<string> => {
   setTimeout(function () {
-    window.open("https://youtu.be/BnkhBwzBqlQ")
+    window.open("https://youtu.be/Js_-gKm1RYI")
   }, 1000)
 
   return `Permission denied: unable to run the command '${args[0]}' as root.`
@@ -79,7 +79,7 @@ export const repo = async (args?: string[]): Promise<string> => {
 
 export const donate = async (args?: string[]): Promise<string> => {
   setTimeout(function () {
-    window.open(packageJson.funding.url, "_blank")
+    window.open("https://linktr.ee/eevelynxd", "_blank")
   }, 1000)
 
   return "Opening donation url..."
