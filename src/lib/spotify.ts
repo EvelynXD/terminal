@@ -1,6 +1,6 @@
-const client_id = process.env.SPOTIFY_CLIENT_ID as string
-const client_secret = process.env.SPOTIFY_CLIENT_SECRET as string
-const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN as string
+const client_id = "fb453cc9eaf445dd82ced29d80b21dc9"
+const client_secret = "74723a641a17491298fecd12befe7c06"
+const refresh_token = "AQCTs8eS-nUlzBpFd3rJ7w-r9kfu1Is8ricylmSbjNF1HpzkHc3OHPbqU5JpRFiZUV-v3WXGk7UPv65NOtCVGz7cCwwUUXFCs4ZIrHvhzwF9JKlcJYTMOLk_XvWmGQBcT9o"
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64")
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`
