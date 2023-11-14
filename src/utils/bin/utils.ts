@@ -33,7 +33,7 @@ export const date = async (args: string[]): Promise<string> => {
 
 export const blogspot = async (args: string[]): Promise<string> => {
   setTimeout(function () {
-    window.open("https://www.kebelet-iphone.my.id/", "_blank")
+    window.open("https://eevelynxd.blogspot.com", "_blank")
   }, 1000)
 
   return "Opening blogger..."
