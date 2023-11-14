@@ -25,10 +25,33 @@ export const spotify = async (args: string[]): Promise<string> => {
       } else {
         return "No top tracks found"
       }
-    case "playlist":
-      window.open(`https://open.spotify.com/playlist/7hNw1SmmRWqv77Tbyn0OZ3`)
-
-      return "Opening playlist"
+      case "playlist":
+        const playlists: Playlist[] = await getSpotifyPlaylists()
+        const user: any = await getSpotifyUser()
+  
+        if (Array.isArray(playlists) && playlists.length > 0) {
+          const filteredPlaylists = playlists.filter(
+            (playlist: Playlist) => playlist.owner === user.name
+          ) // Ganti "__" dengan nama pemilik yang diinginkan
+          if (filteredPlaylists.length > 0) {
+            return filteredPlaylists
+              .map(
+                (playlist: Playlist, index: number) =>
+                  `<div style="display: flex;">${index + 1}. <img src="${
+                    playlist.cover
+                  }" style="width: 50px; margin-right:10px;"/><div style="display: flex; flex-direction: column;"><a href="${
+                    playlist.playlistUrl
+                  }"><strong>${playlist.name}</strong></a><span>${
+                    playlist.tracks
+                  } songs</span></div></div>`
+              )
+              .join("\n")
+          } else {
+            return "No playlists found for the specified owner"
+          }
+        } else {
+          return "No playlists found"
+        }
     case "me":
       window.open(`https://open.spotify.com/user/${config.social.spotify}/`)
 
